@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteio de Números (Tabuada 1-10)</title>
+    
+    <!-- Carrega o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS embutido -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center p-4 sm:p-8 font-sans">
+
+    <!-- Container Principal -->
+    <div class="w-full max-w-4xl mx-auto">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-600">Sorteio de Números</h1>
+            <p class="text-lg text-gray-600 mt-2">Sorteie um resultado das tabuadas de 1 a 10.</p>
+        </header>
+
+        <!-- Seção do Sorteio -->
+        <main class="bg-white p-8 rounded-xl shadow-lg text-center mb-8">
+            <h2 class="text-xl font-semibold text-gray-500 mb-2">Número Sorteado:</h2>
+            <!-- Display Grande para o número sorteado -->
+            <div id="currentNumberDisplay" class="text-7xl md:text-9xl font-bold text-gray-800 my-8 h-32 flex items-center justify-center">
+                #
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="drawButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg shadow-md text-xl transition-transform transform hover:scale-105">
+                    Sortear Novo Número
+                </button>
+                <!-- NOVO BOTÃO: Ver Operações -->
+                <button id="showOperationsButton" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg shadow-md text-xl transition-transform transform hover:scale-105" disabled>
+                    Ver Operações
+                </button>
+                <button id="resetButton" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105 self-center">
+                    Reiniciar
+                </button>
+            </div>
+        </main>
+
+        <!-- Seção do Histórico -->
+        <section class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-center mb-4">Números Disponíveis</h3>
+            <!-- Grade de Histórico (flexível) -->
+            <div id="historyGrid" class="flex flex-row flex-wrap justify-center gap-2">
+                <!-- A grade será preenchida pelo JavaScript -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ===== INÍCIO DO MODAL DE OPERAÇÕES ===== -->
+    <div id="operationsModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full">
+            <h2 class="text-3xl font-bold mb-6 text-center" id="modalTitle">Operações dos Números Sortados</h2>
+            
+            <!-- Lista onde as operações aparecerão -->
+            <!-- Corrigido 'class_name' para 'class' e removido estilo de lista desnecessário -->
+            <ul id="modalList" class="space-y-2 text-lg text-gray-700 max-h-60 overflow-y-auto">
+                <!-- Operações serão inseridas aqui via JS -->
+            </ul>
+            
+            <button id="closeModalButton" class="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg transition-transform transform hover:scale-105">
+                Fechar
+            </button>
+        </div>
+    </div>
+    <!-- ===== FIM DO MODAL DE OPERAÇÕES ===== -->
+
+
+    <!-- JavaScript embutido -->
+    <script src="js/script2.js"></script>
+</body>
+</html>
