@@ -18,3 +18,24 @@ button:disabled {
 }
 
 /*Do aluno*/
+
+/* Estilo personalizado para a célula selecionada */
+.cell.selected {
+    background-color: #3b82f6; /* Azul do Tailwind (blue-500) */
+    color: white;
+    transform: scale(1.05);
+}
+/* Estilo para o espaço livre central */
+.free-space {
+    background-color: #e5e7eb; /* Cinza do Tailwind (gray-200) - mais claro para o fundo branco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem; /* Tamanho do ícone de estrela */
+    color: #f59e0b; /* Amarelo do Tailwind (amber-500) */
+}
+/* Garante que o ícone SVG se ajuste */
+.free-space svg {
+    width: 50%;
+    height: 50%;
+}
